@@ -92,9 +92,6 @@ compare = { 'Actual': testDeltaP,
             'Predicted': result }
 compareDF = pd.DataFrame(compare)
 
-df = pd.read_csv(data_path+'/dataset.csv')
-df.plot(kind = 'line', x = 'time', y = 'price')
-plt.show()
 
 MSE = 0.0
 MSE = sm.mean_squared_error(y_true=testDeltaP,y_pred=result)
